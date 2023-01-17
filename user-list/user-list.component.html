@@ -1,0 +1,25 @@
+<h2>user list</h2>
+<table class="table table-striped">
+<thead>
+    <tr>
+        <th> First Name</th>
+        <th> Last Name</th>
+        <th> Actions </th>
+    
+    </tr>
+
+</thead>
+ <tbody>
+    <tr *ngFor = "let user of users">
+        <td>{{user.userNom}}</td>
+        <td>{{user.userPrenom}}</td>
+        <td>
+    <button (click) = "updateUser(user.userId)" class="btn btn-info"> Update </button>
+    <button (click) = "deleteUser(user.userId)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
+    <button (click) = "userDetails(user.userId)" class="btn btn-info" style="margin-left: 10px">View</button>
+
+</td>
+    </tr>
+ </tbody>
+
+</table>
